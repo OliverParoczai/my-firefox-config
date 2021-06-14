@@ -1,0 +1,113 @@
+@import url(chrome/iconized_main_menu.css);
+@import url(chrome/iconized_menubar_items.css);
+@import url(chrome/linux_gtk_window_control_patch.css);
+@import url(chrome/passive_tab_audio_label.css);
+@import url(chrome/tab_separator_lines.css);
+@import url(chrome/non_floating_sharp_tabs.css);
+@import url(chrome/sharp_menupopup_corners.css);
+
+
+/* Apply your custom modifications after imports */
+
+:root{
+  --toolbar-bgcolor: rgb(32,32,32) !important;
+  --uc-menu-bkgnd: var(--toolbar-bgcolor);
+  --arrowpanel-background: var(--toolbar-bgcolor) !important;
+  --autocomplete-popup-background: var(--toolbar-bgcolor) !important;
+  --uc-menu-disabled: rgb(90,90,90) !important;
+  --lwt-toolbar-field-focus: rgb(36,44,59) !important;
+  --toolbarseparator-color: rgb(56,56,61) !important;
+}
+
+#sidebar-box{ --sidebar-background-color: var(--toolbar-bgcolor) !important; }
+window.sidebar-panel{ --lwt-sidebar-background-color: rgb(36,44,59) !important; }
+
+  /** Root - Reduce Padding ***************************************************/
+  :root {
+    /* Tab Bar 
+    --proton-tab-block-margin: 2px !important;
+    --inline-tab-padding:      6px !important;
+    */
+
+    /* Panel */
+    --arrowpanel-menuitem-border-radius: 0px !important;
+    --arrowpanel-menuicon-padding: 0px !important;
+    --arrowpanel-menuitem-margin: 0 var(--arrowpanel-menuicon-padding) !important; /* Original: 0 8px */
+    --arrowpanel-menuitem-padding: 5px !important; /* Original: 8px */
+    --arrowpanel-padding:        0.8em !important; /* Original: 16px or .cui-widget-panel, .cui-widget-panel::part(arrowcontent) => 4px 0 */
+  }
+
+  :root[uidensity=compact] {
+    /* Tool Bar
+    --toolbarbutton-outer-padding: 2px !important; 
+     */
+
+    /* Panel */
+    --arrowpanel-menuitem-padding: 3px  !important; /* Original: 8px */
+  }
+
+  :root[uidensity=touch] {
+    /* Tab Bar - Like Original 
+    --proton-tab-block-margin: 4px !important;
+    --inline-tab-padding:      8px !important;
+    */
+
+    /* Panel - Like Original */
+    --arrowpanel-menuitem-padding: 8px  !important; /* Original: 8px */
+  }
+
+  /** URL Bar - Reduce Padding ************************************************/
+  :root:not([uidensity=touch]) #urlbar-container, #search-container {
+    padding-block: 2px; /* Original: 4px */
+    margin-inline: 5px; /* Original: 5px */
+  }
+
+  /* spread menu */
+  :root[uidensity=compact] .urlbarView-row:not([type=tip], [type=dynamic]) {
+    padding-block: 1px; /* [Compact, General]: 2px, Touch: 11px */
+  }
+  :root[uidensity=compact] #urlbar .search-one-offs:not([hidden]) {
+    padding-block: 2px; /* [Compact, General]: 4px, Touch 11px */
+  }
+
+  /** BookMark Bar - Reduce Height ********************************************/
+  :root[uidensity=compact] #PersonalToolbar toolbarbutton {
+      margin-top: 0px; /* Original: 2px */
+  }
+
+  /** Menu - Reduce Padding ***************************************************/
+  :root:not([uidensity=touch]) menupopup > menuitem, menupopup > menu {
+    padding-block: 0.35em !important; /* Original: 0.5em */
+  }
+  :root:not([uidensity=touch]) .menu-text, .menu-iconic-text {
+    padding-inline-end: 0 !important; /* Original: 2px */
+  }
+  :root:not([uidensity=touch]) .menupopup-arrowscrollbox {
+    padding-block: 1px !important;    /* Original: 4px*/
+  }
+  :root:not([uidensity=touch]) #context-navigation:not([hidden]) {
+    padding: 0 0 1px !important;      /* Original: 0 0 4px*/
+  }
+  :root:not([uidensity=touch]) .menu-right {
+    margin-right: 6px !important;     /* Original: 12px */
+  }
+
+  :root[uidensity=compact] menupopup > menuitem, menupopup > menu {
+    padding-block: 0.25em !important; /* Original: 0.5em */
+  }
+  
+  #appMenu-fxa-status { display:none !important; }
+  toolbarseparator.sync-ui-item { display:none !important; }
+  
+  #context-inspect-a11y{ display: none !important; }
+  
+  #appMenu-fxa-status2[fxastatus] > toolbarbutton::before, #appMenu-protonMainView > .panel-subview-body > toolbarbutton > image { margin-inline: 12px 12px !important; }
+  
+  panelmultiview .toolbaritem-combined-buttons > label { margin-inline: 12px 12px !important; }
+  
+.subviewbutton[shortcut]::after, .widget-overflow-list .subviewbutton-nav::after, .PanelUI-subView .subviewbutton-nav::after { margin-right: 12px !important; }
+
+.subviewbutton > .toolbarbutton-icon, .subviewbutton-iconic > .toolbarbutton-icon {
+    margin-left: 12px !important;
+}
+

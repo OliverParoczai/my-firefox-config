@@ -1,0 +1,36 @@
+@import url(content/css_scrollbar_width_color.css);
+@import url(content/transparent_reader_toolbar.css);
+
+:root{
+  --newtab-background-primary-text-color: rgb(249, 249, 250) !important;
+  --newtab-background-color: rgba(42, 42, 46, 1) !important;
+  --in-content-page-background: rgba(42, 42, 46, 1) !important;
+  --in-content-primary-button-background: rgb(0, 140, 255) !important;
+  --in-content-primary-button-background-hover: rgb(0, 140, 255) !important;
+  --in-content-primary-button-background-active: rgb(0, 140, 255) !important;
+  --checkbox-checked-bgcolor: rgb(0, 140, 255) !important;
+  --checkbox-checked-hover-bgcolor: rgb(0, 140, 255) !important;
+  --checkbox-checked-active-bgcolor: rgb(0, 140, 255) !important;
+}
+
+
+/* Newpage tweaks */
+.search-wrapper .logo-and-wordmark{
+    display: none !important;
+
+}
+.personalize-button {
+    display: none !important;
+}
+
+.outer-wrapper.newtab-experience .search-wrapper .search-handoff-button, .outer-wrapper.newtab-experience .search-wrapper input, .outer-wrapper.newtab-experience .top-site-outer .tile{
+    box-shadow: none !important;
+    border-radius: 3px !important;
+    font-weight: normal  !important;
+}
+
+.outer-wrapper.newtab-experience .top-site-outer{
+    border-radius: 3px !important;
+}
+
+
