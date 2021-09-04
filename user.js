@@ -167,7 +167,7 @@ user_pref("browser.ping-centre.staging.endpoint", "data:,");
 user_pref("extensions.legacy.enabled", true);
 user_pref("accessibility.typeaheadfind", false);
 //Firefox beta only
-user_pref("network.trr.mode", 0);
+user_pref("network.trr.mode", 5);
 user_pref("network.trr.uri", "");
 user_pref("network.trr.bootstrapAddress", "");
 user_pref("extensions.fxmonitor.enabled", false);
@@ -349,6 +349,7 @@ user_pref("media.getusermedia.audiocapture.enabled", false);
 user_pref("media.autoplay.enabled", true);
 user_pref("media.block-autoplay-until-in-foreground", true);
 user_pref("network.gio.supported-protocols", ""); // (hidden pref) 
+user_pref("network.http.windows-sso.enabled", false); // [DEFAULT: false]
 
 /*** 2300: WEB WORKERS [SETUP]
      A worker is a JS "background task" running in a global context, i.e. it is different from
@@ -405,6 +406,7 @@ user_pref("security.csp.enable", true); // default: true
 user_pref("security.csp.enable_violation_events", false);
 user_pref("security.csp.experimentalEnabled", true);
 user_pref("security.dialog_enable_delay", 0); // default: 1000 (milliseconds)
+user_pref("dom.targetBlankNoOpener.enabled", true); // [DEFAULT: true FF79+]
 user_pref("browser.startup.homepage_override.mstone", "ignore"); // master switch
 user_pref("startup.homepage_welcome_url", "");
  user_pref("startup.homepage_welcome_url.additional", "");
