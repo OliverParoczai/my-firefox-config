@@ -172,8 +172,18 @@ user_pref("network.trr.uri", "");
 user_pref("network.trr.bootstrapAddress", "");
 user_pref("extensions.fxmonitor.enabled", false);
 user_pref("browser.newtabpage.activity-stream.showSponsored", false); 
+user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false); 
 user_pref("layout.css.scrollbar-colors.enabled", true);
-
+user_pref("browser.urlbar.suggest.quicksuggest.nonsponsored", false);
+user_pref("browser.urlbar.suggest.quicksuggest.sponsored", false);
+user_pref("browser.urlbar.quicksuggest.dataCollection.enabled", false);
+user_pref("browser.urlbar.quicksuggest.scenario", "offline");
+user_pref("browser.urlbar.quicksuggest.remoteSettings.enabled", false);
+user_pref("browser.urlbar.merino.endpointURL", "data:,");
+user_pref("browser.newtabpage.activity-stream.feeds.recommendationprovider", false);
+user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
+user_pref("extensions.recommendations.privacyPolicyUrl", "data:,");
+user_pref("extensions.recommendations.themeRecommendationUrl", "data:,");
 
 /*** 0400: BLOCKLISTS / SAFE BROWSING / TRACKING PROTECTION
      This section has security & tracking protection implications vs privacy concerns vs effectiveness
@@ -463,7 +473,7 @@ user_pref("browser.newtabpage.activity-stream.discoverystream.config", "data:,")
  * [NOTE] You can set exceptions under site permissions or use an extension
  * [NOTE] Enforcing category to custom ensures ETP related prefs are always honored
  * [SETTING] Privacy & Security>Enhanced Tracking Protection>Custom>Cookies ***/
-user_pref("network.cookie.cookieBehavior", 1);
+//user_pref("network.cookie.cookieBehavior", 1);
 user_pref("browser.contentblocking.category", "custom");
 /* 2702: set third-party cookies (i.e ALL) (if enabled, see 2701) to session-only
    and (FF58+) set third-party non-secure (i.e HTTP) cookies to session-only
