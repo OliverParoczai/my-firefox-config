@@ -360,6 +360,8 @@ user_pref("media.autoplay.enabled", true);
 user_pref("media.block-autoplay-until-in-foreground", true);
 user_pref("network.gio.supported-protocols", ""); // (hidden pref) 
 user_pref("network.http.windows-sso.enabled", false); // [DEFAULT: false]
+user_pref("dom.block_download_insecure", false);
+
 
 /*** 2300: WEB WORKERS [SETUP]
      A worker is a JS "background task" running in a global context, i.e. it is different from
