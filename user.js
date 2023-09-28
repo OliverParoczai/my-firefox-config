@@ -567,3 +567,38 @@ user_pref("identity.fxaccounts.service.monitorLoginUrl", "");
 
 // Fingerprinting
 user_pref("privacy.resistFingerprinting", true);
+
+user_pref("browser.discovery.enabled", false);
+user_pref("toolkit.telemetry.coverage.opt-out", true); // [HIDDEN PREF]
+user_pref("toolkit.coverage.opt-out", true); // [FF64+] [HIDDEN PREF]
+user_pref("toolkit.coverage.endpoint.base", "");
+user_pref("network.connectivity-service.enabled", false);
+user_pref("browser.places.speculativeConnect.enabled", false);
+user_pref("network.dns.skipTRR-when-parental-control-enabled", false);
+user_pref("browser.privatebrowsing.forceMediaMemoryCache", true); // [FF75+]
+user_pref("security.ssl.require_safe_negotiation", true);
+user_pref("security.ssl.treat_unsafe_negotiation_as_broken", true);
+user_pref("browser.xul.error_pages.expert_bad_cert", true);
+user_pref("media.peerconnection.ice.proxy_only_if_behind_proxy", true);
+user_pref("dom.disable_window_move_resize", true);
+user_pref("permissions.manager.defaultsUrl", "");
+user_pref("pdfjs.enableScripting", false); // [FF86+]
+user_pref("permissions.delegation.enabled", false);
+user_pref("browser.download.always_ask_before_handling_new_types", true);
+user_pref("browser.download.manager.addToRecentDocs", false);
+user_pref("extensions.enabledScopes", 5); // [HIDDEN PREF]
+user_pref("extensions.autoDisableScopes", 15); // [DEFAULT: 15]
+user_pref("extensions.postDownloadThirdPartyPrompt", false);
+user_pref("privacy.partition.serviceWorkers", true); // [DEFAULT: true FF105+]
+user_pref("privacy.partition.always_partition_third_party_non_cookie_storage", true); // [FF104+] [DEFAULT: true FF109+]
+user_pref("privacy.partition.always_partition_third_party_non_cookie_storage.exempt_sessionstorage", false); // [FF105+] [DEFAULT: false FF109+]
+user_pref("privacy.resistFingerprinting.block_mozAddonManager", true); // [HIDDEN PREF FF57-108]
+user_pref("browser.display.use_system_colors", false); // [DEFAULT: false NON-WINDOWS]
+user_pref("extensions.webcompat.enable_shims", false); // [DEFAULT: true]
+user_pref("security.tls.version.enable-deprecated", false); // [DEFAULT: false]
+user_pref("extensions.quarantinedDomains.enabled", false); // [DEFAULT: true]
+user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", false);
+user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false);
+user_pref("browser.messaging-system.whatsNewPanel.enabled", false);
+user_pref("browser.urlbar.showSearchTerms.enabled", false);
+
