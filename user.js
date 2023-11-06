@@ -146,7 +146,7 @@ user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
 user_pref("browser.newtabpage.activity-stream.telemetry", false);
 user_pref("browser.newtabpage.activity-stream.telemetry.ping.endpoint", "");
 user_pref("browser.newtabpage.activity-stream.disableSnippets", true);
-user_pref("browser.newtabpage.activity-stream.asrouter.snippetsUrl", );
+user_pref("browser.newtabpage.activity-stream.asrouter.snippetsUrl", "data:,");
 user_pref("browser.newtabpage.activity-stream.filterAdult", false);
 user_pref("browser.newtabpage.activity-stream.feeds.migration", false);
 user_pref("browser.newtabpage.activity-stream.feeds.snippets", false);
